@@ -2,36 +2,6 @@
 <html lang="ja">
 
 <head>
- 
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17254631676"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17254631676');
-</script>
-<!-- Event snippet for RB-search conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17254631676/ovQjCIixv-EaEPyR06NA',
-      'transaction_id': '',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-
-
-	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>株式投資特設ページ</title>
@@ -143,6 +113,38 @@ function gtag_report_conversion(url) {
             animation: breathe 2s infinite;
         }
 
+        .footer-section {
+            width: 100%;
+            padding: 30px 20px 100px 20px;
+            background-color: #121212;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: #888888;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00c300;
+        }
+
+        .footer-links .divider {
+            color: #555555;
+            font-size: 14px;
+        }
+
         @keyframes blink {
             0%, 100% {
                 opacity: 1;
@@ -158,6 +160,17 @@ function gtag_report_conversion(url) {
             }
             50% {
                 transform: translateX(-50%) scale(1.05);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .footer-links .divider {
+                display: none;
             }
         }
     </style>
@@ -177,11 +190,11 @@ function gtag_report_conversion(url) {
             <img src="img2/2.png" alt="画像2" onclick="k4()">
             <img src="img2/3.png" alt="画像3" onclick="k4()">
             <img src="img2/4.png" alt="画像4"   onclick="k4()">
-			 <img src="img2/5.png" alt="画像1" onclick="k4()">
+            <img src="img2/5.png" alt="画像1" onclick="k4()">
             <img src="img2/6.png" alt="画像2" onclick="k4()">
             <img src="img2/7.png" alt="画像3" onclick="k4()">
             <img src="img2/8.png" alt="画像4"   onclick="k4()">
-			 <img src="img2/9.png" alt="画像1" onclick="k4()">
+            <img src="img2/9.png" alt="画像1" onclick="k4()">
             <img src="img2/10.png" alt="画像2" onclick="k4()">
             <img src="img2/11.png" alt="画像3" onclick="k4()">
             <img src="img2/12.png" alt="画像4" id="last-image" onclick="k4()">
@@ -208,6 +221,17 @@ function gtag_report_conversion(url) {
 
         <!-- Bottom Button -->
         <button class="floating-button" onclick="k4()">今すぐ参加</button>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="footer-links">
+                <a href="privacy.html" target="_blank">プライバシーポリシー</a>
+                <span class="divider">|</span>
+                <a href="terms.html" target="_blank">利用規約</a>
+                <span class="divider">|</span>
+                <a href="Disclaimer.html" target="_blank">免責事項</a>
+            </div>
+        </footer>
     </div>
 
     <script>
